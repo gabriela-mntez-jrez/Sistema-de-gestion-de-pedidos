@@ -7,8 +7,11 @@ import com.sales.orders.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import com.sales.orders.exception.NotFoundException;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class OrderService {
@@ -71,5 +74,27 @@ public class OrderService {
             throw new NotFoundException("Order not found with id: " + id);
         }
         orderRepository.deleteById(id);
+    }
+
+    public List<Order> search(String query) {
+        if (query == null || query.trim().isEmpty()) {
+            return orderRepository.findAll();
+        }
+
+        String q = query.trim();
+
+        List<Order> byStatus = orderRepository.findByEstatusContainingIgnoreCase(q);
+        List<Order> byAddress = orderRepository.findByDireccionEnvioContainingIgnoreCase(q);
+        List<Order> byUserId = orderRepository.findByUserIdContainingIgnoreCase(q);
+        List<Order> byProductCode = orderRepository.findByItemsCodigoProductoContainingIgnoreCase(q);
+
+        // join results and remove duplicates
+        Set<Order> results = new HashSet<>();
+        results.addAll(byStatus);
+        results.addAll(byAddress);
+        results.addAll(byUserId);
+        results.addAll(byProductCode);
+
+        return new ArrayList<>(results);
     }
 }

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
@@ -44,5 +46,10 @@ public class OrderController {
         orderService.delete(id);
         //Returns a 204 No Content response to indicate successful deletion without returning any content
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/search")
+    public List<Order> searchOrders(@RequestParam String query) {
+        return orderService.search(query);
     }
 }
