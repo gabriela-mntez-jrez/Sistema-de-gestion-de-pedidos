@@ -202,26 +202,57 @@ Frontend available at: [http://localhost:5173](http://localhost:5173)
 
 <details>
   <summary>Screenshots</summary>
-
+Screen 1: Order List
 <img width="1913" height="837" alt="image" src="https://github.com/user-attachments/assets/d3f7d549-42fb-4dce-892d-69e55b77726b" />
 
+Screen 2: Order Details
 <img width="1917" height="839" alt="image" src="https://github.com/user-attachments/assets/b2656268-e19a-4657-8dd5-b2fc091a0e05" />
 
+*Workflow 1: User creation*
+
+1.1 User creation editor
 <img width="1919" height="835" alt="image" src="https://github.com/user-attachments/assets/519ffd62-ba03-4903-9d13-b2b3e132cc61" />
 
+1.2 User created alert
 <img width="1919" height="919" alt="image" src="https://github.com/user-attachments/assets/4e43dda1-e09c-4ca7-a3d5-4914ada1df25" />
 
+*Workflow 2: Create Order*
+
+2.1 Order Creation Editor
 <img width="1918" height="835" alt="image" src="https://github.com/user-attachments/assets/fcf54424-3705-4a8a-a5c5-f811bacf3cf4" />
 
+2.2 New order added
 <img width="1919" height="839" alt="image" src="https://github.com/user-attachments/assets/8154d7e1-27d6-4665-80cf-370a133cec1e" />
 
+*Workflow 3: Delete Order*
+
+3.1 Are you sure you want to delete this order? Warning
 <img width="1917" height="872" alt="image" src="https://github.com/user-attachments/assets/7620eb43-c6ce-421c-9ac3-33a3ef825535" />
 
+3.2 Order deleted
 <img width="1918" height="837" alt="image" src="https://github.com/user-attachments/assets/076d597b-546a-4d3c-a09b-539ee7fa03f3" />
 
+*Workflow 4: Order editing*
+
+4.1 Editing order
 <img width="1913" height="837" alt="image" src="https://github.com/user-attachments/assets/c8e6c394-f7fc-4780-b92f-288b7c67964f" />
 
+4.2 Order edited
 <img width="1916" height="838" alt="image" src="https://github.com/user-attachments/assets/318d666a-ece3-4f6c-a7fc-59279e8d9560" />
+
+*Workflow 5: Search for order*
+
+5.1 Enter search term
+<img width="1914" height="835" alt="image" src="https://github.com/user-attachments/assets/23af111c-827e-4c35-9cbc-b8eeed6829e2" />
+
+5.2 Match selected
+<img width="1912" height="833" alt="image" src="https://github.com/user-attachments/assets/cbfa7c88-c1e1-4bbe-a83e-7b76ce30755e" />
+
+5.3 No matches
+<img width="1912" height="834" alt="image" src="https://github.com/user-attachments/assets/7ee23724-7484-434c-bba8-bb5466db5e2e" />
+
+5.4 Clear filter
+<img width="1912" height="836" alt="image" src="https://github.com/user-attachments/assets/c362ae12-08aa-4371-84a5-b1f2fb23dc6a" />
 
 
 </details>
