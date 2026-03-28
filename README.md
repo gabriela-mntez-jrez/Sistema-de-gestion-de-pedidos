@@ -202,14 +202,33 @@ Frontend available at: [http://localhost:5173](http://localhost:5173)
 
 <details>
   <summary>Screenshots</summary>
-      Screenshots here
+
+<img width="1913" height="837" alt="image" src="https://github.com/user-attachments/assets/d3f7d549-42fb-4dce-892d-69e55b77726b" />
+
+<img width="1917" height="839" alt="image" src="https://github.com/user-attachments/assets/b2656268-e19a-4657-8dd5-b2fc091a0e05" />
+
+<img width="1919" height="835" alt="image" src="https://github.com/user-attachments/assets/519ffd62-ba03-4903-9d13-b2b3e132cc61" />
+
+<img width="1919" height="919" alt="image" src="https://github.com/user-attachments/assets/4e43dda1-e09c-4ca7-a3d5-4914ada1df25" />
+
+<img width="1918" height="835" alt="image" src="https://github.com/user-attachments/assets/fcf54424-3705-4a8a-a5c5-f811bacf3cf4" />
+
+<img width="1919" height="839" alt="image" src="https://github.com/user-attachments/assets/8154d7e1-27d6-4665-80cf-370a133cec1e" />
+
+<img width="1917" height="872" alt="image" src="https://github.com/user-attachments/assets/7620eb43-c6ce-421c-9ac3-33a3ef825535" />
+
+<img width="1918" height="837" alt="image" src="https://github.com/user-attachments/assets/076d597b-546a-4d3c-a09b-539ee7fa03f3" />
+
+<img width="1913" height="837" alt="image" src="https://github.com/user-attachments/assets/c8e6c394-f7fc-4780-b92f-288b7c67964f" />
+
+<img width="1916" height="838" alt="image" src="https://github.com/user-attachments/assets/318d666a-ece3-4f6c-a7fc-59279e8d9560" />
+
 
 </details>
 
 <details>
   <summary>Videos</summary>
-      Screenshots here
-
+      
 </details>
 
 ## Deploy
