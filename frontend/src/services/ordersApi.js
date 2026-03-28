@@ -32,3 +32,18 @@ export async function updateOrder(id, order) {
 
   return res.json();
 }
+
+export async function createOrder(order) {
+  const response = await fetch(`${BASE_URL}/orders`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(order),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(errorText);
+  }
+
+  return response.json();
+}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import StatusBadge from "../components/StatusBadge";
 
 function OrdersTable({ orders, onDelete }) {
   return (
@@ -19,7 +20,9 @@ function OrdersTable({ orders, onDelete }) {
             <td>
               <Link to={`/orders/${order.id}`}>{order.id}</Link>
             </td>
-            <td>{order.estatus}</td>
+            <td>
+                <StatusBadge status={order.estatus} />
+            </td>
             <td>{order.direccionEnvio}</td>
             <td>${order.total}</td>
 

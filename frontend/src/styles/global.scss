@@ -1,3 +1,39 @@
+@import "./theme.scss";
+
 body {
-  background: #f5f6fa;
+  background: #f7f7f7;
+  color: $dark;
+  font-family: Arial, sans-serif;
+}
+
+.app-header {
+  background: $primary;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.btn-primary:hover {
+  background-color: $secondary !important;
+  border-color: $secondary !important;
+}
+
+.btn-outline-primary {
+  border-color: $primary !important;
+  color: $primary !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: $primary !important;
+  color: white !important;
+}
+
+.table thead {
+  background-color: $accent;
 }

@@ -1,0 +1,23 @@
+.orders-list-page {
+  .search-box {
+    max-width: 500px;
+  }
+
+  .suggestions {
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}
