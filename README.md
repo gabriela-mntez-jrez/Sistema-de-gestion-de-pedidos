@@ -259,7 +259,26 @@ Screen 2: Order Details
 
 <details>
   <summary>Videos</summary>
-      
+*Workflow 1: User creation*
+
+https://github.com/user-attachments/assets/d7e5cdca-5b46-49e9-918f-07f65ffe8fef
+
+*Workflow 2: Create Order*
+
+*Worklow 3: View and Edit Order*
+
+
+*Workflow 4: Delete Order*
+
+https://github.com/user-attachments/assets/73e4d58a-471a-4f84-be79-284abadcf669
+
+*Workflow 5: Order editing*
+
+*Workflow 6: Search for order*
+
+https://github.com/user-attachments/assets/d0faa191-e836-4367-b480-328539b5345f
+
+
 </details>
 
 ## Deploy
