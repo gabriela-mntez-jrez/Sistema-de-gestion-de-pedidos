@@ -4,30 +4,31 @@ import Layout from "../components/Layout";
 import StatusBadge from "../components/StatusBadge";
 import CreateOrderModal from "../components/CreateOrderModal";
 import { getOrders, searchOrders, deleteOrder } from "../services/ordersApi";
+import TypeaheadSearch from "../components/TypeaheadSearch";
 
 function OrdersListPage() {
   const [orders, setOrders] = useState([]);
   const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [loadingSuggestions, setLoadingSuggestions] = useState(false);
 
   useEffect(() => {
     loadOrders();
   }, []);
 
+  useEffect(() => {
+    function handleClickOutside() {
+      setShowSuggestions(false);
+    }
+
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, []);
+
   async function loadOrders() {
     const data = await getOrders();
     setOrders(data);
-  }
-
-  async function handleSearch(value) {
-    setQuery(value);
-
-    if (!value.trim()) {
-      loadOrders();
-      return;
-    }
-
-    const results = await searchOrders(value);
-    setOrders(results);
   }
 
   async function handleDelete(id) {
@@ -38,16 +39,55 @@ function OrdersListPage() {
     loadOrders();
   }
 
+  async function loadSuggestions(text) {
+    if (!text.trim()) {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      return;
+    }
+
+    setLoadingSuggestions(true);
+
+    try {
+      const results = await searchOrders(text);
+      setSuggestions(results);
+      setShowSuggestions(true);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoadingSuggestions(false);
+    }
+  }
+
   return (
     <Layout title="Lista de Pedidos">
       {/* Search */}
       <div className="card shadow-sm p-4 mb-4">
         <h4>Buscar pedidos</h4>
-        <input
-          className="form-control"
-          placeholder="Buscar por dirección..."
-          value={query}
-          onChange={(e) => handleSearch(e.target.value)}
+        <TypeaheadSearch
+          query={query}
+          suggestions={suggestions}
+          showSuggestions={showSuggestions}
+          loading={loadingSuggestions}
+          onQueryChange={(value) => {
+            setQuery(value);
+
+            if (!value.trim()) {
+              loadOrders();
+            }
+
+            loadSuggestions(value);
+          }}
+          onSelect={(order) => {
+            setOrders([order]);
+            setShowSuggestions(false);
+            setSuggestions([]);
+            setQuery(order.direccionEnvio);
+          }}
+          onFocus={() => {
+            if (suggestions.length > 0) setShowSuggestions(true);
+          }}
+          onClickInside={(e) => e.stopPropagation()}
         />
       </div>
 
