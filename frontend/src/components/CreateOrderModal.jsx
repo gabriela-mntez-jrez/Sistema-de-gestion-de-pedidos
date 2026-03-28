@@ -17,7 +17,17 @@ function CreateOrderModal({ onCreated }) {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    loadUsers();
+    const modal = document.getElementById("createOrderModal");
+
+    function handleModalOpen() {
+      loadUsers();
+    }
+
+    modal.addEventListener("shown.bs.modal", handleModalOpen);
+
+    return () => {
+      modal.removeEventListener("shown.bs.modal", handleModalOpen);
+    };
   }, []);
 
   async function loadUsers() {
@@ -27,7 +37,7 @@ function CreateOrderModal({ onCreated }) {
       setUsers(data);
 
       if (data.length > 0) {
-        setUserId(data[0].id); // default: primer usuario
+        setUserId(data[0].id);
       }
 
       setLoadingUsers(false);
@@ -102,7 +112,7 @@ function CreateOrderModal({ onCreated }) {
 
       await createOrder(newOrder);
 
-      // limpiar
+      // clean
       setDireccionEnvio("");
       setEstatus("CREADO");
       setItems([{ codigoProducto: "", cantidad: 1, precio: 0 }]);
@@ -135,7 +145,7 @@ function CreateOrderModal({ onCreated }) {
             <div className="modal-body">
               {error && <div className="alert alert-danger">{error}</div>}
 
-              {/* Usuario */}
+              {/* User */}
               <div className="mb-3">
                 <label className="form-label">
                   <b>Usuario</b>
@@ -158,7 +168,7 @@ function CreateOrderModal({ onCreated }) {
                 )}
               </div>
 
-              {/* Dirección */}
+              {/* Address */}
               <div className="mb-3">
                 <label className="form-label">
                   <b>Dirección de Envío</b>
@@ -171,7 +181,7 @@ function CreateOrderModal({ onCreated }) {
                 />
               </div>
 
-              {/* Estatus */}
+              {/* Status */}
               <div className="mb-3">
                 <label className="form-label">
                   <b>Estatus</b>

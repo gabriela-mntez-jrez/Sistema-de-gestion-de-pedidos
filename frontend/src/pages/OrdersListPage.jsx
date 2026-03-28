@@ -5,6 +5,7 @@ import StatusBadge from "../components/StatusBadge";
 import CreateOrderModal from "../components/CreateOrderModal";
 import { getOrders, searchOrders, deleteOrder } from "../services/ordersApi";
 import TypeaheadSearch from "../components/TypeaheadSearch";
+import CreateUserModal from "../components/CreateUserModal";
 
 function OrdersListPage() {
   const [orders, setOrders] = useState([]);
@@ -93,16 +94,8 @@ function OrdersListPage() {
 
       {/* Table */}
       <div className="card shadow-sm p-4">
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <h4 className="m-0">Pedidos</h4>
-
-          <button
-            className="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#createOrderModal"
-          >
-            + Crear Pedido
-          </button>
+        <div className="p-2">
+          <h4>Pedidos</h4>
         </div>
 
         <div className="table-responsive">
@@ -149,6 +142,24 @@ function OrdersListPage() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <button
+            className="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#createUserModal"
+          >
+            + Crear Usuario
+          </button>
+          <CreateUserModal onCreated={() => window.alert("Usuario creado")} />
+          <button
+            className="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#createOrderModal"
+          >
+            + Crear Pedido
+          </button>
         </div>
 
         {orders.length === 0 && <p>No hay pedidos.</p>}
