@@ -28,6 +28,12 @@ function OrdersListPage() {
     return () => window.removeEventListener("click", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (debounceTimer) clearTimeout(debounceTimer);
+    };
+  }, [debounceTimer]);
+
   async function loadOrders() {
     const data = await getOrders();
     setOrders(data);
