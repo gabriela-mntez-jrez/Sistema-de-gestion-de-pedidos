@@ -13,6 +13,7 @@ function OrdersListPage() {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [loadingSuggestions, setLoadingSuggestions] = useState(false);
+  const [debounceTimer, setDebounceTimer] = useState(null);
 
   useEffect(() => {
     loadOrders();
@@ -73,11 +74,25 @@ function OrdersListPage() {
           onQueryChange={(value) => {
             setQuery(value);
 
-            if (!value.trim()) {
-              loadOrders();
+            //clear debounce timer
+            if(debounceTimer){
+              clearTimeout(debounceTimer);
             }
 
-            loadSuggestions(value);
+            //if value is empty, we reset everything
+            if (!value.trim()) {
+              setSuggestions([]);
+              setShowSuggestions(false);
+              loadOrders();
+              return;
+            }
+
+            //set new debounce timer
+            const timer = setTimeout(() => {
+              loadSuggestions(value);
+            }, 500);
+
+            setDebounceTimer(timer);
           }}
           onSelect={(order) => {
             setOrders([order]);
