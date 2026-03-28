@@ -121,7 +121,8 @@ Users:
 - `POST /users`
 - `PUT /users/{id}`
 - `DELETE /users/{id}`
-Orders
+
+Orders:
 - `GET /orders`
 - `GET /orders/{id}`
 - `POST /orders`
@@ -154,10 +155,11 @@ In the `backend/` folder:
 ```
 mvn spring-boot:run
 ```
-The backend will run at: `http://localhost:8080`
+The backend will run at: [http://localhost:8080](http://localhost:8080)
 
 #### 3) Endpoint Health Check
-You can verify that it is working by using the GET endpoint `http://localhost:8080/health`
+You can verify that it is working by using the GET endpoint [http://localhost:8080/health](http://localhost:8080/health)
+
 Expected response:
 ```
 OK
@@ -166,6 +168,7 @@ OK
 #### Swagger / OpenAPI
 To test the endpoints directly from your browser:
 - Swagger UI: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
 For the JSON file describing the API:
 - OpenAPI JSON: [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
 
@@ -192,13 +195,27 @@ npm run dev
 Frontend available at: [http://localhost:5173](http://localhost:5173)
 
 ### Frontend → Backend Connection
-The frontend consumes the API at: [http://localhost:8080](http://localhost:8080)
-The backend includes CORS configuration to allow requests from: [http://localhost:5173](http://localhost:5173)
+- The frontend consumes the API at: [http://localhost:8080](http://localhost:8080)
+- The backend includes CORS configuration to allow requests from: [http://localhost:5173](http://localhost:5173)
+
+### Demo
+
+<details>
+  <summary>Screenshots</summary>
+      Screenshots here
+
+</details>
+
+<details>
+  <summary>Videos</summary>
+      Screenshots here
+
+</details>
 
 ## Deploy
-Frontend: [https://sistema-de-gestion-de-pedidos.netlify.app/](https://sistema-de-gestion-de-pedidos.netlify.app/)
-Backend Swagger: [https://sistema-de-gestion-de-pedidos-production.up.railway.app/swagger-ui/index.html](https://sistema-de-gestion-de-pedidos-production.up.railway.app/swagger-ui/index.html)
 
+- Frontend: [Netlify](https://sistema-de-gestion-de-pedidos.netlify.app/)
+- Backend Swagger: [Railway](https://sistema-de-gestion-de-pedidos-production.up.railway.app/swagger-ui/index.html)
 
 ## Author
 👩‍💻 Gabriela Martinez
