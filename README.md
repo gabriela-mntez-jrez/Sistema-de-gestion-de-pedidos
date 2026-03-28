@@ -265,16 +265,23 @@ https://github.com/user-attachments/assets/d7e5cdca-5b46-49e9-918f-07f65ffe8fef
 
 *Workflow 2: Create Order*
 
+https://github.com/user-attachments/assets/e5fd314f-9e64-424d-94df-ab58ddd72f3f
+
+https://github.com/user-attachments/assets/84a15820-1b0d-4767-aa0e-0279987b99e9
+
 *Worklow 3: View and Edit Order*
 
+https://github.com/user-attachments/assets/11095e05-dea5-419b-b170-20a604d14a96
+
+https://github.com/user-attachments/assets/021c790c-78f6-420c-97c6-8dd2a5ae49e2
+
+https://github.com/user-attachments/assets/45f87c57-bb2d-485a-874c-42a6d65eedf1
 
 *Workflow 4: Delete Order*
 
 https://github.com/user-attachments/assets/73e4d58a-471a-4f84-be79-284abadcf669
 
-*Workflow 5: Order editing*
-
-*Workflow 6: Search for order*
+*Workflow 5: Search for order*
 
 https://github.com/user-attachments/assets/d0faa191-e836-4367-b480-328539b5345f
 
